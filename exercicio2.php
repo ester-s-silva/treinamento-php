@@ -22,7 +22,7 @@
     $nota2 = rand(0, 10); 
     $nota3 = rand(0, 10); 
     $nota4 = rand(0, 10);
-    $media = ($nota1 + $nota2 + $nota3 + $nota4) / 4 
+    $media = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
     ?>
 
     <div class="container">
@@ -82,8 +82,10 @@
                 </td>
                 <tfoot>
                     <td colspan="2"><b>
-                        <?php if ($media >= 6) {
-                            echo '<span style="color:blue">' . 'Parabéns, você foi aprovado.' . '</span>';
+                        <?php if ($media >= 6 && $media < 9) {
+                            echo '<span style="color:green">' . 'Parabéns, você foi aprovado.' . '</span>';
+                        } elseif ($media >= 9) {
+                            echo '<span style="color:blue">' . 'Parabéns, você foi aprovado com excelência.' . '</span>';
                         } else {
                             echo '<span style="color:red">' . 'Desculpe, você foi reprovado.' . '</span>';
                         }; ?>
